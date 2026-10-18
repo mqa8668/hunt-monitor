@@ -1,0 +1,23 @@
+{
+  "name": "@hunt-monitor/core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "zod": "^4.6.5",
+    "pino": "^10.3.1",
+    "re2-wasm": "1.0.2",
+    "@hunt-monitor/db": "workspace:*",
+    "drizzle-orm": "^0.45.2"
+  },
+  "devDependencies": {
+    "yaml": "^2.7.0"
+  }
+}

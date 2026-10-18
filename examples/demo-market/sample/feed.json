@@ -1,0 +1,367 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Demo Market (synthetic data)",
+  "home_page_url": "http://localhost:8787",
+  "items": [
+    {
+      "id": "d-42-0",
+      "url": "http://localhost:8787/item/d-42-0",
+      "title": "Wanted: Mirrorless camera with kit lens",
+      "content_text": "Looking for a Mirrorless camera with kit lens. Budget up to $1295. Can pick up downtown.",
+      "date_published": "2026-10-18T11:31:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 099"
+        }
+      ]
+    },
+    {
+      "id": "d-42-1",
+      "url": "http://localhost:8787/item/d-42-1",
+      "title": "Fujifilm X100V silver",
+      "content_text": "Selling Fujifilm X100V silver, like new. $1565. Pickup near the station.",
+      "date_published": "2026-10-18T11:32:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 093"
+        }
+      ]
+    },
+    {
+      "id": "d-42-2",
+      "url": "http://localhost:8787/item/d-42-2",
+      "title": "Standing desk electric",
+      "content_text": "Selling Standing desk electric, used. $365. Pickup downtown.",
+      "date_published": "2026-10-18T11:33:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 036"
+        }
+      ]
+    },
+    {
+      "id": "d-42-3",
+      "url": "http://localhost:8787/item/d-42-3",
+      "title": "Standing desk manual",
+      "content_text": "Selling Standing desk manual, good condition. $385. Pickup near the station.",
+      "date_published": "2026-10-18T11:34:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 043"
+        }
+      ]
+    },
+    {
+      "id": "d-42-4",
+      "url": "http://localhost:8787/item/d-42-4",
+      "title": "Mechanical keyboard 75%",
+      "content_text": "Selling Mechanical keyboard 75%, used. $155. Pickup north side.",
+      "date_published": "2026-10-18T11:35:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 051"
+        }
+      ]
+    },
+    {
+      "id": "d-42-5",
+      "url": "http://localhost:8787/item/d-42-5",
+      "title": "Fujifilm X100V black",
+      "content_text": "Selling Fujifilm X100V black, good condition. $1350. Pickup north side.",
+      "date_published": "2026-10-18T11:36:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 044"
+        }
+      ]
+    },
+    {
+      "id": "d-42-6",
+      "url": "http://localhost:8787/item/d-42-6",
+      "title": "iPhone 15 Pro 512GB",
+      "content_text": "Selling iPhone 15 Pro 512GB, like new. $730. Pickup by the park.",
+      "date_published": "2026-10-18T11:37:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 073"
+        }
+      ]
+    },
+    {
+      "id": "d-42-7",
+      "url": "http://localhost:8787/item/d-42-7",
+      "title": "Mechanical keyboard linear",
+      "content_text": "Selling Mechanical keyboard linear, new. $145. Pickup north side.",
+      "date_published": "2026-10-18T11:38:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 020"
+        }
+      ]
+    },
+    {
+      "id": "d-42-8",
+      "url": "http://localhost:8787/item/d-42-8",
+      "title": "MacBook Air M2 16GB",
+      "content_text": "Selling MacBook Air M2 16GB, like new. $770. Pickup north side.",
+      "date_published": "2026-10-18T11:39:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 027"
+        }
+      ]
+    },
+    {
+      "id": "d-42-9",
+      "url": "http://localhost:8787/item/d-42-9",
+      "title": "Mirrorless camera with kit lens",
+      "content_text": "Selling Mirrorless camera with kit lens, used. $1215. Pickup downtown.",
+      "date_published": "2026-10-18T11:40:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 026"
+        }
+      ]
+    },
+    {
+      "id": "d-42-10",
+      "url": "http://localhost:8787/item/d-42-10",
+      "title": "Standing desk manual",
+      "content_text": "Selling Standing desk manual, good condition. $385. Pickup near the station.",
+      "date_published": "2026-10-18T11:41:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 043"
+        }
+      ]
+    },
+    {
+      "id": "d-42-11",
+      "url": "http://localhost:8787/item/d-42-11",
+      "title": "Mechanical keyboard 75%",
+      "content_text": "Selling Mechanical keyboard 75%, used. $70. Pickup by the park.",
+      "date_published": "2026-10-18T11:42:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 090"
+        }
+      ]
+    },
+    {
+      "id": "d-42-12",
+      "url": "http://localhost:8787/item/d-42-12",
+      "title": "Road bike size 54",
+      "content_text": "Selling Road bike size 54, used. $465. Pickup the east end.",
+      "date_published": "2026-10-18T11:43:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 049"
+        }
+      ]
+    },
+    {
+      "id": "d-42-13",
+      "url": "http://localhost:8787/item/d-42-13",
+      "title": "iPhone 15 Pro 256GB",
+      "content_text": "Selling iPhone 15 Pro 256GB, broken screen, for parts. $855. Pickup near the station.",
+      "date_published": "2026-10-18T11:44:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 010"
+        }
+      ]
+    },
+    {
+      "id": "d-42-14",
+      "url": "http://localhost:8787/item/d-42-14",
+      "title": "Road bike size 54",
+      "content_text": "Selling Road bike size 54, used. $845. Pickup north side.",
+      "date_published": "2026-10-18T11:45:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 081"
+        }
+      ]
+    },
+    {
+      "id": "d-42-15",
+      "url": "http://localhost:8787/item/d-42-15",
+      "title": "MacBook Air M2 16GB",
+      "content_text": "Selling MacBook Air M2 16GB, like new. $770. Pickup north side.",
+      "date_published": "2026-10-18T11:46:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 027"
+        }
+      ]
+    },
+    {
+      "id": "d-42-16",
+      "url": "http://localhost:8787/item/d-42-16",
+      "title": "Fujifilm X100V black",
+      "content_text": "Selling Fujifilm X100V black, broken screen, for parts. $1315. Pickup near the station.",
+      "date_published": "2026-10-18T11:47:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 044"
+        }
+      ]
+    },
+    {
+      "id": "d-42-17",
+      "url": "http://localhost:8787/item/d-42-17",
+      "title": "Road bike size 52",
+      "content_text": "Selling Road bike size 52, used. $645. Pickup downtown.",
+      "date_published": "2026-10-18T11:48:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 015"
+        }
+      ]
+    },
+    {
+      "id": "d-42-18",
+      "url": "http://localhost:8787/item/d-42-18",
+      "title": "Wanted: MacBook Air M2 16GB",
+      "content_text": "Looking for a MacBook Air M2 16GB. Budget up to $895. Can pick up by the park.",
+      "date_published": "2026-10-18T11:49:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 084"
+        }
+      ]
+    },
+    {
+      "id": "d-42-19",
+      "url": "http://localhost:8787/item/d-42-19",
+      "title": "Fujifilm X100V black",
+      "content_text": "Selling Fujifilm X100V black, used. $1490. Pickup downtown.",
+      "date_published": "2026-10-18T11:50:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 095"
+        }
+      ]
+    },
+    {
+      "id": "d-42-20",
+      "url": "http://localhost:8787/item/d-42-20",
+      "title": "iPhone 15 Pro 256GB",
+      "content_text": "Selling iPhone 15 Pro 256GB, broken screen, for parts. $855. Pickup near the station.",
+      "date_published": "2026-10-18T11:51:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 010"
+        }
+      ]
+    },
+    {
+      "id": "d-42-21",
+      "url": "http://localhost:8787/item/d-42-21",
+      "title": "Road bike size 54",
+      "content_text": "Selling Road bike size 54, used. $740. Pickup near the station.",
+      "date_published": "2026-10-18T11:52:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 027"
+        }
+      ]
+    },
+    {
+      "id": "d-42-22",
+      "url": "http://localhost:8787/item/d-42-22",
+      "title": "Fujifilm X100V silver",
+      "content_text": "Selling Fujifilm X100V silver, good condition. $1205. Pickup near the station.",
+      "date_published": "2026-10-18T11:53:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 062"
+        }
+      ]
+    },
+    {
+      "id": "d-42-23",
+      "url": "http://localhost:8787/item/d-42-23",
+      "title": "Mechanical keyboard linear",
+      "content_text": "Selling Mechanical keyboard linear, good condition. $145. Pickup north side.",
+      "date_published": "2026-10-18T11:54:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 041"
+        }
+      ]
+    },
+    {
+      "id": "d-42-24",
+      "url": "http://localhost:8787/item/d-42-24",
+      "title": "Mechanical keyboard brown switches",
+      "content_text": "Selling Mechanical keyboard brown switches, used. $115. Pickup by the park.",
+      "date_published": "2026-10-18T11:55:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 096"
+        }
+      ]
+    },
+    {
+      "id": "d-42-25",
+      "url": "http://localhost:8787/item/d-42-25",
+      "title": "Wanted: MacBook Air M2 16GB",
+      "content_text": "Looking for a MacBook Air M2 16GB. Budget up to $895. Can pick up by the park.",
+      "date_published": "2026-10-18T11:56:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 084"
+        }
+      ]
+    },
+    {
+      "id": "d-42-26",
+      "url": "http://localhost:8787/item/d-42-26",
+      "title": "Standing desk manual",
+      "content_text": "Selling Standing desk manual, used. $225. Pickup by the park.",
+      "date_published": "2026-10-18T11:57:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 024"
+        }
+      ]
+    },
+    {
+      "id": "d-42-27",
+      "url": "http://localhost:8787/item/d-42-27",
+      "title": "Wanted: Road bike size 52",
+      "content_text": "Looking for a Road bike size 52. Budget up to $955. Can pick up downtown.",
+      "date_published": "2026-10-18T11:58:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 038"
+        }
+      ]
+    },
+    {
+      "id": "d-42-28",
+      "url": "http://localhost:8787/item/d-42-28",
+      "title": "Fujifilm X100V silver",
+      "content_text": "Selling Fujifilm X100V silver, like new. $1345. Pickup near the station.",
+      "date_published": "2026-10-18T11:59:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 084"
+        }
+      ]
+    },
+    {
+      "id": "d-42-29",
+      "url": "http://localhost:8787/item/d-42-29",
+      "title": "Wanted: Fujifilm X100V black",
+      "content_text": "Looking for a Fujifilm X100V black. Budget up to $1105. Can pick up north side.",
+      "date_published": "2026-10-18T12:00:00.000Z",
+      "authors": [
+        {
+          "name": "Seller 081"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "hunt-monitor",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "bun run --filter '*' typecheck",
+    "test": "bun test apps packages tests",
+    "lint": "eslint .",
+    "hunt": "bun apps/cli/src/index.ts",
+    "db:migrate": "bun packages/db/src/migrate.ts",
+    "db:seed": "bun packages/db/src/seed.ts",
+    "db:generate": "bun run --cwd packages/db generate",
+    "worker": "bun apps/worker/src/index.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/bun": "^1.4.2",
+    "eslint": "^10.10.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.70.0"
+  }
+}

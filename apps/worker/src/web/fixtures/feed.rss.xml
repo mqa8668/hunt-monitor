@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sample market</title>
+    <item>
+      <title>iPhone 15 Pro 256GB, like new</title>
+      <link>https://market.example/item/1001</link>
+      <guid isPermaLink="false">item-1001</guid>
+      <description><![CDATA[<p>Selling my phone, <b>$780</b>. Battery 94%.</p>]]></description>
+      <dc:creator>Sam</dc:creator>
+      <pubDate>Sat, 17 Oct 2026 09:30:00 GMT</pubDate>
+      <enclosure url="https://market.example/img/1001.jpg" type="image/jpeg" length="1"/>
+    </item>
+    <item>
+      <title>Road bike frame, size 56</title>
+      <link>https://market.example/item/1002</link>
+      <description>Carbon frame &amp; fork, $450 or best offer.</description>
+    </item>
+    <item>
+      <description></description>
+    </item>
+  </channel>
+</rss>

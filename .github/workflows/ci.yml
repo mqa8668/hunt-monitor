@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  BUN_VERSION: "1.4.2"
+
+jobs:
+  check:
+    name: Typecheck, lint, test
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: hunt
+          POSTGRES_PASSWORD: hunt
+          POSTGRES_DB: hunt_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U hunt -d hunt_test"
+          --health-interval 2s
+          --health-timeout 3s
+          --health-retries 30
+    env:
+      DATABASE_URL: postgres://hunt:hunt@localhost:5432/hunt_test
+      TEST_DATABASE_URL: postgres://hunt:hunt@localhost:5432/hunt_test
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - name: Install
+        run: bun install --frozen-lockfile
+      - name: Typecheck
+        run: bun run typecheck
+      - name: Lint
+        run: bun run lint
+      - name: Migrate
+        run: bun run db:migrate
+      - name: Test (with Postgres)
+        run: bun run test
+
+  gitleaks:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    env:
+      GITLEAKS_VERSION: "8.30.1"
+      GITLEAKS_SHA256: 551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks
+        run: |
+          curl -sSfL -o gitleaks.tar.gz "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          echo "${GITLEAKS_SHA256}  gitleaks.tar.gz" | sha256sum -c -
+          tar -xzf gitleaks.tar.gz gitleaks
+          sudo install gitleaks /usr/local/bin/gitleaks
+      - name: Scan history
+        run: gitleaks git --redact --no-banner .
+      - name: Scan tree
+        run: gitleaks dir --redact --no-banner .
+
+  prose:
+    name: Prose check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: No em or en dashes in Markdown
+        run: |
+          if grep -rnP '[\x{2013}\x{2014}]' --include='*.md' --exclude-dir=node_modules .; then
+            echo "Em or en dash found. Use a comma, colon, parentheses or a hyphen." >&2
+            exit 1
+          fi

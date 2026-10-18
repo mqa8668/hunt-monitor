@@ -1,0 +1,18 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Sample JSON feed",
+  "items": [
+    {
+      "id": "j-1",
+      "url": "https://market.example/item/j-1",
+      "title": "Mechanical keyboard, brown switches",
+      "content_text": "Barely used, $60 shipped.",
+      "date_published": "2026-10-17T10:00:00Z",
+      "authors": [{ "name": "Robin" }],
+      "_hunt": { "intent": "sell", "priceAmount": 60, "currency": "USD", "attributes": { "layout": "75%" } }
+    },
+    { "id": 2, "url": "https://market.example/item/j-2", "content_html": "<p>Looking for a <b>used</b> monitor</p>" },
+    { "id": "j-3", "title": "No url, skipped by map" },
+    "not an object"
+  ]
+}

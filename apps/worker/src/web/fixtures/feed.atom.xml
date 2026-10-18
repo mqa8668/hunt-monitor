@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sample atom</title>
+  <entry>
+    <id>tag:market.example,2026:2001</id>
+    <title>Standing desk, walnut</title>
+    <link rel="self" href="https://market.example/api/2001"/>
+    <link rel="alternate" href="https://market.example/item/2001"/>
+    <summary type="html">&lt;p&gt;Electric, 140cm. $200.&lt;/p&gt;</summary>
+    <author><name>Alex</name></author>
+    <updated>2026-10-16T08:00:00Z</updated>
+  </entry>
+</feed>

@@ -1,0 +1,28 @@
+{
+  "name": "@hunt-monitor/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./migrate": "./src/migrate.ts",
+    "./testing": "./src/testing.ts",
+    "./seed": "./src/seed.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "bun test",
+    "generate": "drizzle-kit generate",
+    "migrate": "bun src/migrate.ts",
+    "seed": "bun src/seed.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.2",
+    "postgres": "^3.4.5",
+    "yaml": "^2.7.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10"
+  }
+}

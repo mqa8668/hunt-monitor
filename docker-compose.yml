@@ -1,0 +1,55 @@
+# `docker compose up` gives a working demo: Postgres, the demo market (synthetic listings),
+# a one-off setup step, and the worker. Alerts print in the worker's logs.
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: hunt
+      POSTGRES_PASSWORD: hunt
+      POSTGRES_DB: hunt
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hunt -d hunt"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  demo-market:
+    build: .
+    command: ["bun", "examples/demo-market/server.ts"]
+    environment:
+      DEMO_MARKET_PUBLIC_URL: http://localhost:8787
+    ports:
+      - "127.0.0.1:8787:8787"
+    healthcheck:
+      test: ["CMD", "bun", "-e", "fetch('http://localhost:8787/healthz').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  setup:
+    build: .
+    command: ["sh", "-c", "bun run db:migrate && bun run db:seed && bun run hunt demo"]
+    environment: &hunt-env
+      DATABASE_URL: postgres://hunt:hunt@postgres:5432/hunt
+      DEMO_MARKET_URL: http://demo-market:8787
+      HUNT_ALLOW_LOCAL_FEEDS: "true"
+      HUNT_POLL_CRON: "* * * * *"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      demo-market:
+        condition: service_healthy
+    restart: "no"
+
+  worker:
+    build: .
+    command: ["bun", "run", "worker"]
+    environment: *hunt-env
+    depends_on:
+      setup:
+        condition: service_completed_successfully
+
+volumes:
+  pgdata:

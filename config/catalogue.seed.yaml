@@ -1,0 +1,25 @@
+# Demo catalogue: named products the rules can recognise. Items are keyed by (categorySlug, name);
+# aliases and attributes are replaced on every seed run.
+- categorySlug: iphone
+  name: iPhone 15 Pro
+  aliases: ["iphone 15 pro", "iphone15 pro", "ip15 pro", "ip 15 pro"]
+- categorySlug: iphone
+  name: iPhone 14
+  aliases: ["iphone 14", "ip14", "ip 14"]
+- categorySlug: macbook
+  name: MacBook Air M2
+  aliases: ["macbook air m2", "mba m2", "air m2"]
+  attributes: { line: air, chip: m2 }
+- categorySlug: macbook
+  name: MacBook Pro 14
+  aliases: ["macbook pro 14", "mbp 14"]
+  attributes: { line: pro }
+- categorySlug: fujifilm
+  name: Fujifilm X100V
+  aliases: ["fujifilm x100v", "fuji x100v", "x100v", "fujifilm x100"]
+- categorySlug: fujifilm
+  name: Fujifilm X-T4
+  aliases: ["fujifilm x-t4", "fuji xt4", "x-t4"]
+- categorySlug: road-bike
+  name: Road Bike
+  aliases: ["road bike", "roadbike", "giant defy", "specialized allez"]

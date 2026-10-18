@@ -1,0 +1,42 @@
+# Seeds the config table. Each top-level key becomes one row (key, value).
+app.tz: UTC
+llm.model.cheap: gpt-4o-mini
+llm.model.strong: gpt-4o
+llm.enrichAll: false
+llm.confidenceThreshold: 0.7
+llm.dailyTokenBudget: 2000000
+llm.budgetAlertPct: 80
+llm.timeoutMs: 30000
+llm.maxRetries: 2
+enrich.ruleConfidenceMin: 0.7
+enrich.llmConfidenceMin: 0.5
+enrich.aliasRefreshSec: 600
+match.minScore: 0.5
+match.maxWatches: 1000
+match.reloadDebounceMs: 200
+match.reloadIntervalSec: 60
+match.regexMaxLen: 200
+match.textMaxChars: 20000
+match.weakTerms: ["for sale", "sale", "sell", "selling", "buy", "wanted", "used", "new", "price", "obo", "cheap", "item", "good", "condition"]
+notify.quietHoursStart: "22:00"
+notify.quietHoursEnd: "07:00"
+notify.retryMaxAttempts: 5
+notify.retry.delaysSec: [5, 30, 120, 600, 1800]
+notify.rateLimit.perChatPerSec: 1
+notify.rateLimit.perChatPerMin: 20
+notify.rateLimit.globalPerSec: 25
+notify.excerptChars: 300
+retention.postRevisionDays: 180
+ops.shutdownTimeoutMs: 30000
+ops.dlqAlertIntervalSec: 3600
+web.enabled: false
+web.pollIntervalSec: 600
+web.maxSourcesPerRun: 5
+web.maxPagesPerRun: 3
+web.pageSize: 50
+web.minRequestGapMs: 5000
+web.alertMaxAgeMinutes: 120
+web.backoffBaseSec: 300
+web.backoffMaxSec: 21600
+web.userAgent: ""   # empty = hunt-monitor/<version> (+https://github.com/mqa8668/hunt-monitor)
+watch.parseRatePerMin: 20

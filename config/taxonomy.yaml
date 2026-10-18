@@ -1,0 +1,68 @@
+# Demo taxonomy. Three levels at most. priceBounds are in the default currency (USD).
+# Attributes are inherited by child categories.
+
+- slug: electronics
+  name: Electronics
+  children:
+    - slug: phones
+      name: Phones
+      priceBounds: {min: 20, max: 3000}
+      children:
+        - slug: iphone
+          name: iPhone
+          attributes:
+            - {"key": "storage_gb", "label": "Storage", "kind": "number", "unit": "gb", "min": 64, "max": 2048, "keyAttr": true}
+            - {"key": "battery_pct", "label": "Battery health", "kind": "number", "unit": "pct", "min": 1, "max": 100, "keyAttr": false}
+            - {"key": "carrier_lock", "label": "Carrier", "kind": "enum", "keyAttr": false, "values": ["unlocked", "locked"], "aliases": [{"value": "unlocked", "match": ["factory unlocked", "unlocked"]}, {"value": "locked", "match": ["carrier locked", "locked"]}]}
+        - slug: android-phone
+          name: Android Phone
+    - slug: laptops
+      name: Laptops
+      priceBounds: {min: 50, max: 6000}
+      children:
+        - slug: macbook
+          name: MacBook
+          attributes:
+            - {"key": "line", "label": "Line", "kind": "enum", "keyAttr": false, "values": ["air", "pro", "mini", "imac", "studio"]}
+            - {"key": "chip", "label": "Chip", "kind": "ordered", "keyAttr": true, "values": ["m1", "m1_pro", "m1_max", "m1_ultra", "m2", "m2_pro", "m2_max", "m3", "m3_pro", "m3_max", "m4", "m4_pro", "m4_max"]}
+            - {"key": "ram_gb", "label": "RAM", "kind": "number", "unit": "gb", "min": 4, "max": 256, "keyAttr": true}
+            - {"key": "ssd_gb", "label": "SSD", "kind": "number", "unit": "gb", "min": 128, "max": 8192, "keyAttr": true}
+            - {"key": "battery_pct", "label": "Battery health", "kind": "number", "unit": "pct", "min": 1, "max": 100, "keyAttr": false}
+        - slug: windows-laptop
+          name: Windows Laptop
+    - slug: cameras
+      name: Cameras
+      priceBounds: {min: 30, max: 8000}
+      children:
+        - slug: fujifilm
+          name: Fujifilm
+        - slug: sony-alpha
+          name: Sony Alpha
+        - slug: canon-eos
+          name: Canon EOS
+- slug: sports
+  name: Sports
+  children:
+    - slug: bicycles
+      name: Bicycles
+      priceBounds: {min: 30, max: 15000}
+      children:
+        - slug: road-bike
+          name: Road Bike
+          attributes:
+            - {"key": "frame_size_cm", "label": "Frame size", "kind": "number", "unit": "cm", "min": 44, "max": 62, "keyAttr": true}
+        - slug: mountain-bike
+          name: Mountain Bike
+- slug: vehicles
+  name: Vehicles
+  children:
+    - slug: cars
+      name: Cars
+      priceBounds: {min: 500, max: 200000}
+      attributes:
+        - {"key": "make", "label": "Make", "kind": "enum", "keyAttr": true, "values": ["toyota", "honda", "ford", "bmw", "mazda"]}
+        - {"key": "model", "label": "Model", "kind": "text", "maxLen": 40, "keyAttr": true, "aliases": [{"value": "camry", "match": ["camry"], "implies": {"make": "toyota"}}, {"value": "civic", "match": ["civic"], "implies": {"make": "honda"}}, {"value": "mustang", "match": ["mustang"], "implies": {"make": "ford"}}]}
+        - {"key": "year", "label": "Year", "kind": "number", "unit": "year", "min": 1990, "max": 2100, "keyAttr": true, "tolerance": 1}
+        - {"key": "odo_km", "label": "Odometer", "kind": "number", "unit": "km", "min": 0, "max": 999999, "keyAttr": false}
+        - {"key": "transmission", "label": "Transmission", "kind": "enum", "keyAttr": true, "keyOptional": true, "values": ["at", "mt"], "aliases": [{"value": "at", "label": "AT", "match": ["automatic", "auto", "at"]}, {"value": "mt", "label": "MT", "match": ["manual", "stick", "mt"]}]}
+        - {"key": "region", "label": "Region", "kind": "enum", "keyAttr": false, "values": ["north", "south", "east", "west"]}
